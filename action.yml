@@ -1,0 +1,14 @@
+name: 'Stavanger'
+description: 'Annotates code with results from Stavanger'
+author: 'KOPERA AS'
+inputs:
+  issues-api-url:
+    description: 'The URL to use for Stavanger Issues API interactions'
+    required: true
+  token:
+    description: 'The token to use for GitHub API interactions'
+    required: false
+    default: ${{ github.token }}
+runs:
+  using: 'node16'
+  main: 'dist/index.js'
